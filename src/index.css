@@ -1,0 +1,45 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #7B61FF;
+  --primary-light: #EDE9FF;
+  --primary-dark: #5B41DF;
+  --accent: #FF7B54;
+  --accent-light: #FFF0EB;
+  --success: #34C759;
+  --success-light: #E8F9EE;
+  --text-main: #1A1A2E;
+  --text-sub: #6B6B8A;
+  --text-hint: #ABABC4;
+  --bg: #F7F6FF;
+  --bg-card: #FFFFFF;
+  --border: #E8E6F5;
+  --shadow: 0 2px 16px rgba(123,97,255,0.08);
+  --shadow-md: 0 4px 24px rgba(123,97,255,0.14);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+html, body {
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
