@@ -4,6 +4,37 @@
 
 ---
 
+## 스크린샷
+
+| 브리징 메시지 | 일정 선택 |
+|:---:|:---:|
+| ![브리징 메시지](docs/screenshots/01_bridging.png) | ![일정 선택](docs/screenshots/02_schedule.png) |
+
+| 사전 질문 수집 | AI 채팅 |
+|:---:|:---:|
+| ![사전 질문](docs/screenshots/03_questions.png) | ![AI 채팅](docs/screenshots/04_chat.png) |
+
+| 예약 완료 | AI 채팅 (초기) |
+|:---:|:---:|
+| ![예약 완료](docs/screenshots/05_confirm.png) | ![AI 채팅 초기](docs/screenshots/06_chat_init.png) |
+
+> 스크린샷 파일은 `docs/screenshots/` 폴더에 위 파일명으로 저장해 주세요.
+
+---
+
+## 데모 영상
+
+> 데모 영상은 `docs/` 폴더에 추가하거나 아래 링크를 교체해 주세요.
+
+```
+docs/demo.mp4
+```
+
+<!-- 영상 파일이 준비되면 아래 주석을 해제하고 경로를 수정하세요 -->
+<!-- ![데모 영상](docs/demo.gif) -->
+
+---
+
 ## 배경 및 목적
 
 아맘때 서비스는 AI 기반 비대면 발달심리 검사와 상담사 전화 상담을 제공합니다. 검사 완료 후 해석 상담까지 2~3일의 공백이 존재하며, 이 기간에 보호자는 임상 용어가 포함된 보고서를 혼자 읽으며 불안이 심화됩니다. 이는 상담 이탈, CS 문의 증가, 서비스 신뢰도 저하로 이어집니다.
@@ -48,6 +79,9 @@ engage/
 ├── index.html
 ├── package.json
 ├── vite.config.js
+├── docs/
+│   ├── screenshots/               # 스크린샷 이미지
+│   └── demo.mp4                   # 데모 영상
 └── src/
     ├── main.jsx
     ├── App.jsx
