@@ -25,12 +25,14 @@ import Layout from '../components/Layout.jsx'
 import Btn from '../components/Btn.jsx'
 
 // 사전 질문 선택지 — id는 ConfirmPage의 QUESTION_LABELS와 1:1 매핑됨
+// 사측 제공 K-CBCL 샘플 보고서 기반으로 보호자가 실제로 궁금해하는 항목으로 개선
+// "또래 비교" 항목 제거 → 보고서에 이미 %tile로 제공되므로 중복. 실질적 질문으로 교체.
 const QUESTIONS = [
-  { id: 'q1', text: '검사 수치가 높게/낮게 나온 이유가 궁금해요' },
-  { id: 'q2', text: '일상에서 어떻게 도와야 할지 모르겠어요' },
-  { id: 'q3', text: '또래와 비교했을 때 어느 정도인지 알고 싶어요' },
-  { id: 'q4', text: '추가 전문 기관 연계가 필요한지 궁금해요' },
-  { id: 'q5', text: '학교/어린이집에 어떻게 이야기해야 할지 모르겠어요' },
+  { id: 'q1', text: '준임상/임상 범위로 나온 척도가 있는데 어떻게 봐야 할까요' },
+  { id: 'q2', text: '일상에서 아이를 어떻게 도와야 할지 모르겠어요' },
+  { id: 'q3', text: '집과 학교에서 아이의 모습이 너무 달라서 걱정돼요' },
+  { id: 'q4', text: '추가 검사나 전문 기관 연계가 필요한지 궁금해요' },
+  { id: 'q5', text: '학교/어린이집 선생님께 어떻게 이야기해야 할지 모르겠어요' },
 ]
 
 export default function QuestionsPage({ booking }) {

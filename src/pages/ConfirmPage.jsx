@@ -31,10 +31,11 @@ import Layout from '../components/Layout.jsx'
 import Btn from '../components/Btn.jsx'
 
 // 사전 질문 ID → 표시용 짧은 라벨 매핑 (QuestionsPage의 QUESTIONS와 연동)
+// QuestionsPage의 항목 변경에 맞춰 함께 업데이트
 const QUESTION_LABELS = {
-  q1: '검사 수치 이유',
+  q1: '준임상/임상 범위 해석',
   q2: '일상 지원 방법',
-  q3: '또래 비교',
+  q3: '집·학교 행동 차이',
   q4: '전문 기관 연계',
   q5: '학교/어린이집 안내',
 }
