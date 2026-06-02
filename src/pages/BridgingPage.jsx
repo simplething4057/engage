@@ -1,8 +1,27 @@
+/**
+ * BridgingPage.jsx — 브리징 메시지 (진입 화면)
+ *
+ * 목적:
+ *   검사 완료 직후 보호자의 불안을 완화하고, 해석 상담의 가치를 설명해
+ *   자발적인 예약으로 유도하는 화면. 이탈 방지가 핵심 목표.
+ *
+ * 사용자 선택지:
+ *   1. "상담 일정 선택하기" → /schedule (즉시 예약)
+ *   2. "결과에 대해 먼저 물어보고 싶어요" → /chat (AI 채팅으로 불안 해소 후 예약)
+ *   3. "나중에 선택할게요" → /reminder (리마인더 설정)
+ *
+ * 설계 원칙:
+ *   - 안내 카드 하단에 "이 안내는 검사 결과를 해석한 내용이 아닙니다" 고지
+ *     → 임상 해석 오해 방지 및 모든 보호자에게 동일 메시지 전달 명시
+ *   - 가장 중요한 CTA(일정 선택)를 가장 위에 배치
+ */
+
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout.jsx'
 import Btn from '../components/Btn.jsx'
 
+// 상담에서 얻을 수 있는 혜택 목록 — 아이콘, 제목, 설명으로 구성
 const benefits = [
   { icon: '🔍', title: '결과의 의미 이해', desc: '수치와 그래프가 우리 아이에게 어떤 의미인지 설명해 드려요' },
   { icon: '🌱', title: '실천 가능한 방향 제안', desc: '일상에서 바로 적용할 수 있는 구체적인 방법을 안내해 드려요' },
@@ -14,7 +33,7 @@ export default function BridgingPage() {
 
   return (
     <Layout>
-      {/* 완료 배지 */}
+      {/* 검사 완료 배지 — 보호자가 수고했다는 인정, 긍정적 감정으로 시작 */}
       <div style={{ textAlign: 'center', marginBottom: 28 }}>
         <div style={{
           width: 72, height: 72, borderRadius: '50%',
@@ -38,7 +57,7 @@ export default function BridgingPage() {
         </p>
       </div>
 
-      {/* 안내 카드 */}
+      {/* 상담 안내 카드 — 검사 결과 해석이 아님을 명시 (법적·윤리적 고지) */}
       <div style={{
         background: 'var(--primary-light)',
         borderRadius: 'var(--radius)',
@@ -58,7 +77,7 @@ export default function BridgingPage() {
         </p>
       </div>
 
-      {/* 상담에서 얻을 수 있는 것 */}
+      {/* 상담 혜택 카드 목록 — benefits 배열을 map으로 렌더링 */}
       <h2 style={{ fontSize: 15, fontWeight: 700, color: 'var(--text-main)', marginBottom: 14 }}>
         상담에서 얻을 수 있는 것
       </h2>
@@ -81,7 +100,7 @@ export default function BridgingPage() {
         ))}
       </div>
 
-      {/* 상담 정보 태그 */}
+      {/* 상담 정보 태그 — 부담을 낮추는 간결한 사실 정보 */}
       <div style={{ display: 'flex', gap: 8, marginBottom: 28, flexWrap: 'wrap' }}>
         {['소요 시간 약 30분', '결과지 없이도 참여 가능', '전화 상담'].map((tag, i) => (
           <span key={i} style={{
@@ -96,6 +115,7 @@ export default function BridgingPage() {
         ))}
       </div>
 
+      {/* CTA 버튼 그룹 — 우선순위 순서대로 배치 */}
       <Btn onClick={() => navigate('/schedule')}>
         상담 일정 선택하기
       </Btn>
