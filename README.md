@@ -294,4 +294,15 @@ AI는 보호자의 불안을 완화하는 데 집중하며, 임상 판단은 상
 ## 14.라이선스
 
 Internal POC — (주)인사이더
-    
+
+### 사용 구성요소 라이선스
+
+| 구성요소 | 제공처 | 라이선스 | 비고 |
+|---|---|---|---|
+| EXAONE 3.5 | LG AI Research | EXAONE AI Model License 1.1 | 비상업적 연구·교육 목적 허용, 상업적 사용 시 별도 허가 필요 |
+| Ollama | Ollama | MIT License | 로컬 LLM 런타임 |
+| React | Meta | MIT License | |
+| Vite | Evan You / Vite contributors | MIT License | |
+| React Router | Remix Software | MIT License | |
+
+> 본 프로젝트는 비상업적 사내 POC 목적으로 제작되었으며, EXAONE 3.5 모델 라이선스 조건에 부합합니다.
